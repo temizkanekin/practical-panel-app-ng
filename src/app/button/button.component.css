@@ -1,0 +1,13 @@
+.button-root {
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s ease;
+    background-color: white;
+    outline: none;
+}
+  
+button:disabled {
+    opacity: .2;
+    pointer-events: none;
+}

@@ -1,0 +1,30 @@
+<form [formGroup]="coordinatesForm" class="manual-override" (ngSubmit)="onSubmit(coordinatesForm.value)">
+    <span>Manual Override</span>
+    <div class="manual-override-select-coordinates">
+        <label for="x">X:</label>
+        <div style="text-align: left;font-weight: 500;">
+            <input type="number" id="x" formControlName="coordinateX" />
+            <div style="color:red;padding: .25rem;"
+                *ngIf="coordinatesForm.controls.coordinateX.errors && (coordinatesForm.controls.coordinateX.errors.max || coordinatesForm.controls.coordinateX.errors.min)">
+                Invalid value</div>
+        </div>
+    </div>
+    <div class="manual-override-select-coordinates">
+        <label for="y">Y:</label>
+        <div style="text-align: left;font-weight: 500;">
+            <input type="number" id="y" formControlName="coordinateY" />
+            <div style="color:red;padding: .25rem;"
+                *ngIf="coordinatesForm.controls.coordinateY.errors && (coordinatesForm.controls.coordinateY.errors.max || coordinatesForm.controls.coordinateY.errors.min)">
+                Invalid value</div>
+        </div>
+    </div>
+    <div>
+        <span>Set To:</span>
+        <input value="true" type="radio" id="typeOn" formControlName="coordinateToggle" />
+        <label for="typeOn">ON</label>
+        <input value="false" type="radio" id="typeOff" formControlName="coordinateToggle" />
+        <label for="typeOff">OFF</label>
+    </div>
+    <app-button type="submit" [disabled]="coordinatesForm.invalid" label="Confirm" width="100px" height="35px">
+    </app-button>
+</form>

@@ -1,0 +1,23 @@
+<table class="table">
+    <thead *ngIf="buttonStatesArray.length > 0">
+        <tr>
+            <th *ngFor="let column of buttonStatesArray[0]; let columnIndex = index">{{columnIndex + 1}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of buttonStatesArray; let rowIndex = index" [attr.data-content]="rowIndex + 1">
+            <td *ngFor="let column of row; let columnIndex = index">
+                <app-button [id]="rowIndex +''+ columnIndex" [label]="column ? 'ON' : 'OFF'" [isToggleActive]="column"
+                    (click)="handleButtonClick($event,rowIndex,columnIndex)">
+                </app-button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th [colSpan]="4">
+                <app-button (click)="notifyReset.emit()" label="RESET" width="100px" height="35px"></app-button>
+            </th>
+        </tr>
+    </tfoot>
+</table>

@@ -1,0 +1,27 @@
+.manual-override{
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    background: white;
+    box-shadow: rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    border-radius: 4px;
+    transition: 1s ease;
+}
+.manual-override:hover{
+    background: lightblue;
+}
+
+.manual-override-select-coordinates {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.manual-override-select-coordinates label {
+    width: 10%;
+}

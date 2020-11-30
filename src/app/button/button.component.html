@@ -1,0 +1,4 @@
+<button [disabled]="disabled" [type]="type" class="button-root" [style.background-color]="isToggleActive && 'lightblue'"
+      [style.width]="width" [style.height]="height" [id]="id" (click)="handleButtonClick.emit($event)">
+      {{ label }}
+</button>

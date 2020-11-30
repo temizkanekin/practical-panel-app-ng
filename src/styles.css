@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+html, body, app-root {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* font-family: 'Noto Sans', sans-serif; */
+    font-size: 15px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+app-root {
+  width: 75%;
+  height: 50%;
+  margin: auto;
+  background-color: #F5F5F5;
+  box-shadow: inset 0 0 20px red;
+}
+
+label {
+  margin-right: .5rem;
+}
+
+@media only screen and (max-width: 1024px){
+	app-root {
+    height: 100%;
+    width: 100%;
+	}
+}

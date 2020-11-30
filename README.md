@@ -1,5 +1,9 @@
 # PracticalPanelAppNg
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e0d2e4b-9256-4c0f-b598-dede678898d3/deploy-status)](https://app.netlify.com/sites/awesome-hopper-ca7f61/deploys)
+
+Live version on Netlify: https://awesome-hopper-ca7f61.netlify.app/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Description about app
